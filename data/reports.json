@@ -1,0 +1,223 @@
+[
+    {
+        "id": 1,
+        "category": "Waste",
+        "description": "Large amount of garbage has accumulated near the roadside drain.",
+        "location": "Gandhipuram",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "garbage",
+            "waste"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 80,
+        "risk_level": "High",
+        "report_count": 1,
+        "created_at": "2026-09-05T12:06:05.717907"
+    },
+    {
+        "id": 2,
+        "category": "Waste",
+        "description": "Dust pollution",
+        "location": "Ramanathapuram,Coimbatore",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "waste"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 80,
+        "risk_level": "High",
+        "report_count": 1,
+        "created_at": "2026-09-05T17:06:52.884966"
+    },
+    {
+        "id": 3,
+        "category": "Waste",
+        "description": "Waste dumping on road side .",
+        "location": "Nnajundapuram, Coimbatore",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "waste",
+            "dump"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 80,
+        "risk_level": "High",
+        "report_count": 1,
+        "created_at": "2026-09-05T20:42:30.189898"
+    },
+    {
+        "id": 4,
+        "category": "Waste",
+        "description": "Waste dumping on road side .",
+        "location": "Nnajundapuram, Coimbatore",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "waste",
+            "dump"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 90,
+        "risk_level": "High",
+        "report_count": 2,
+        "created_at": "2026-09-05T20:42:43.282277"
+    },
+    {
+        "id": 5,
+        "category": "Waste",
+        "description": "Dumping of waste on the roads",
+        "location": "Nanjundapuram,coimbatore",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "waste",
+            "dump"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 80,
+        "risk_level": "High",
+        "report_count": 1,
+        "created_at": "2026-09-05T20:52:46.647092"
+    },
+    {
+        "id": 6,
+        "category": "Waste",
+        "description": "waste dumped on road sides",
+        "location": "Nanjundapuram,coimbatore",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "waste",
+            "dump"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 90,
+        "risk_level": "High",
+        "report_count": 2,
+        "created_at": "2026-09-05T21:16:27.670362"
+    },
+    {
+        "id": 7,
+        "category": "Waste",
+        "description": "large garbage waste dumped on road",
+        "location": "Ward 74, Central Zone, \u0ba8\u0b9e\u0bcd\u0b9a\u0bc1\u0ba3\u0bcd\u0b9f\u0bbe\u0baa\u0bc1\u0bb0\u0bae\u0bcd, Coimbatore South, \u0b95\u0bcb\u0baf\u0bae\u0bcd\u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0bc2\u0bb0\u0bcd \u0bae\u0bbe\u0bb5\u0b9f\u0bcd\u0b9f\u0bae\u0bcd, Tamil Nadu, 641023, India",
+        "image": null,
+        "status": "Reported",
+        "problem": "Waste",
+        "severity": "High",
+        "confidence": 92,
+        "impact": "Can cause drain blockage, bad smell and pest problems.",
+        "keywords_found": [
+            "garbage",
+            "waste",
+            "dump"
+        ],
+        "ripple_chain": [
+            "Waste accumulation",
+            "Drain blockage",
+            "Water stagnation",
+            "Waterlogging"
+        ],
+        "ripple_risk": "High",
+        "recommendation": "Clear accumulated waste and inspect nearby drainage before rainfall.",
+        "risk_score": 80,
+        "risk_level": "High",
+        "report_count": 1,
+        "created_at": "2026-09-05T22:13:44.755062"
+    },
+    {
+        "id": 8,
+        "category": "Water",
+        "description": "water pollution in some areas",
+        "location": "Sitra",
+        "image": null,
+        "status": "Reported",
+        "problem": "Water",
+        "severity": "Medium",
+        "confidence": 90,
+        "impact": "Can cause water wastage and infrastructure damage.",
+        "keywords_found": [],
+        "ripple_chain": [
+            "Water leakage",
+            "Water wastage",
+            "Roadside water accumulation",
+            "Infrastructure damage"
+        ],
+        "ripple_risk": "Medium",
+        "recommendation": "Inspect the leaking pipeline and repair it before further water loss.",
+        "risk_score": 50,
+        "risk_level": "Medium",
+        "report_count": 1,
+        "created_at": "2026-09-06T14:55:22.947611"
+    }
+]
