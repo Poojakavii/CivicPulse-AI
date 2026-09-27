@@ -1,39 +1,27 @@
-const API_BASE_URL =
-    "http://127.0.0.1:5000";
-
+const API_BASE_URL = "http://127.0.0.1:5000/api";
 
 // =====================================================
 // HELPER
 // =====================================================
 
 async function parseResponse(response) {
-
     let data;
 
     try {
-
-        data =
-            await response.json();
-
+        data = await response.json();
     } catch {
-
         throw new Error(
             `Server returned an invalid response (${response.status}).`
         );
-
     }
-
 
     if (!response.ok) {
-
         throw new Error(
-            data.message ||
-            data.error ||
+            data?.message ||
+            data?.error ||
             `Request failed (${response.status}).`
         );
-
     }
-
 
     return data;
 }
@@ -44,27 +32,18 @@ async function parseResponse(response) {
 // =====================================================
 
 export async function registerUser(userData) {
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/register`,
-            {
-                method: "POST",
-
-                headers: {
-                    "Content-Type":
-                        "application/json"
-                },
-
-                body:
-                    JSON.stringify(userData)
-            }
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/register`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userData)
+        }
     );
+
+    return parseResponse(response);
 }
 
 
@@ -73,118 +52,59 @@ export async function registerUser(userData) {
 // =====================================================
 
 export async function loginUser(loginData) {
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/login`,
-            {
-                method: "POST",
-
-                headers: {
-                    "Content-Type":
-                        "application/json"
-                },
-
-                body:
-                    JSON.stringify(loginData)
-            }
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/login`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(loginData)
+        }
     );
+
+    return parseResponse(response);
 }
 
 
 // =====================================================
-// SUBMIT CIVIC REPORT
+// SUBMIT REPORT
 // =====================================================
 
-export async function submitReport(
-    reportData
-) {
+export async function submitReport(reportData) {
+    const formData = new FormData();
 
-    const formData =
-        new FormData();
-
-
-    formData.append(
-        "category",
-        reportData.category
-    );
-
-
-    formData.append(
-        "location",
-        reportData.location
-    );
-
-
-    formData.append(
-        "description",
-        reportData.description
-    );
-
-
+    formData.append("category", reportData.category || "");
+    formData.append("location", reportData.location || "");
+    formData.append("description", reportData.description || "");
     formData.append(
         "citizen_id",
-        String(
-            reportData.citizen_id
-        )
+        String(reportData.citizen_id || "")
     );
 
-
-    // REAL GPS
-
-    if (
-        reportData.latitude !==
-        undefined &&
-        reportData.latitude !==
-        null
-    ) {
-
+    if (reportData.latitude !== undefined && reportData.latitude !== null) {
         formData.append(
             "latitude",
-            String(
-                reportData.latitude
-            )
+            String(reportData.latitude)
         );
-
     }
 
-
-    if (
-        reportData.longitude !==
-        undefined &&
-        reportData.longitude !==
-        null
-    ) {
-
+    if (reportData.longitude !== undefined && reportData.longitude !== null) {
         formData.append(
             "longitude",
-            String(
-                reportData.longitude
-            )
+            String(reportData.longitude)
         );
-
     }
 
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/reports`,
-            {
-                method: "POST",
-
-                body: formData
-            }
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/reports`,
+        {
+            method: "POST",
+            body: formData
+        }
     );
+
+    return parseResponse(response);
 }
 
 
@@ -193,16 +113,11 @@ export async function submitReport(
 // =====================================================
 
 export async function getReports() {
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/reports`
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/reports`
     );
+
+    return parseResponse(response);
 }
 
 
@@ -210,19 +125,12 @@ export async function getReports() {
 // GET SINGLE REPORT
 // =====================================================
 
-export async function getReport(
-    reportId
-) {
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/reports/${reportId}`
-        );
-
-
-    return await parseResponse(
-        response
+export async function getReport(reportId) {
+    const response = await fetch(
+        `${API_BASE_URL}/reports/${reportId}`
     );
+
+    return parseResponse(response);
 }
 
 
@@ -230,60 +138,51 @@ export async function getReport(
 // UPDATE REPORT STATUS
 // =====================================================
 
-export async function updateReportStatus(
-    reportId,
-    status
-) {
-
+export async function updateReportStatus(reportId, status) {
     if (!reportId) {
-
-        throw new Error(
-            "Report ID is required."
-        );
-
+        throw new Error("Report ID is required.");
     }
 
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/reports/${reportId}/status`,
-            {
-                method: "PUT",
-
-                headers: {
-                    "Content-Type":
-                        "application/json"
-                },
-
-                body:
-                    JSON.stringify({
-                        status: status
-                    })
-            }
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/reports/${reportId}/status`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                status: status
+            })
+        }
     );
+
+    return parseResponse(response);
 }
 
 
 // =====================================================
-// TEST API
+// RESOLVE REPORT
 // =====================================================
 
-export async function testAPI() {
+export async function resolveReport(reportId, citizenId) {
+    if (!reportId) {
+        throw new Error("Report ID is required.");
+    }
 
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/test`
-        );
-
-
-    return await parseResponse(
-        response
+    const response = await fetch(
+        `${API_BASE_URL}/reports/${reportId}/resolve`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                citizen_id: citizenId
+            })
+        }
     );
+
+    return parseResponse(response);
 }
 
 
@@ -292,66 +191,22 @@ export async function testAPI() {
 // =====================================================
 
 export async function getDashboard() {
-
-    const response =
-        await fetch(
-            `${API_BASE_URL}/api/dashboard`
-        );
-
-
-    return await parseResponse(
-        response
-    );
-}
-// =====================================================
-// MARK REPORT AS RESOLVED
-// =====================================================
-
-export async function resolveReport(
-    reportId,
-    citizenId
-) {
-
     const response = await fetch(
-        `http://127.0.0.1:5000/api/reports/${reportId}/resolve`,
-        {
-            method: "PUT",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                citizen_id: citizenId
-            })
-        }
+        `${API_BASE_URL}/dashboard`
     );
 
-
-    let data;
-
-    try {
-
-        data = await response.json();
-
-    } catch {
-
-        throw new Error(
-            "Invalid response from server."
-        );
-
-    }
+    return parseResponse(response);
+}
 
 
-    if (!response.ok) {
+// =====================================================
+// TEST API
+// =====================================================
 
-        throw new Error(
-            data.message ||
-            "Unable to resolve report."
-        );
+export async function testAPI() {
+    const response = await fetch(
+        `${API_BASE_URL}/test`
+    );
 
-    }
-
-
-    return data;
+    return parseResponse(response);
 }

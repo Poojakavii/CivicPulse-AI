@@ -219,5 +219,84 @@
         "risk_level": "Medium",
         "report_count": 1,
         "created_at": "2026-09-06T14:55:22.947611"
+    },
+    {
+        "id": 9,
+        "category": "Pollution",
+        "description": "Here we are going through heavy pollution in our area.",
+        "location": "Ward 74, Central Zone, \u0ba8\u0b9e\u0bcd\u0b9a\u0bc1\u0ba3\u0bcd\u0b9f\u0bbe\u0baa\u0bc1\u0bb0\u0bae\u0bcd, Coimbatore South, \u0b95\u0bcb\u0baf\u0bae\u0bcd\u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0bc2\u0bb0\u0bcd \u0bae\u0bbe\u0bb5\u0b9f\u0bcd\u0b9f\u0bae\u0bcd, Tamil Nadu, 641023, India",
+        "image": null,
+        "status": "Reported",
+        "problem": "Unknown Civic Issue",
+        "severity": "Medium",
+        "confidence": 60,
+        "impact": "Further analysis is required.",
+        "keywords_found": [],
+        "ripple_chain": [
+            "Unknown Civic Issue",
+            "Possible secondary impact",
+            "Possible community risk"
+        ],
+        "ripple_risk": "Medium",
+        "recommendation": "Collect more reports from the area before taking preventive action.",
+        "risk_score": 60,
+        "risk_level": "Medium",
+        "report_count": 2,
+        "created_at": "2026-09-27T09:50:44.121579"
+    },
+    {
+        "id": 10,
+        "category": "Road",
+        "description": "Roads are very much damaged , accidents are increasing due to it",
+        "location": "Ward 74, Central Zone, \u0ba8\u0b9e\u0bcd\u0b9a\u0bc1\u0ba3\u0bcd\u0b9f\u0bbe\u0baa\u0bc1\u0bb0\u0bae\u0bcd, Coimbatore South, \u0b95\u0bcb\u0baf\u0bae\u0bcd\u0baa\u0bc1\u0ba4\u0bcd\u0ba4\u0bc2\u0bb0\u0bcd \u0bae\u0bbe\u0bb5\u0b9f\u0bcd\u0b9f\u0bae\u0bcd, Tamil Nadu, 641023, India",
+        "image": null,
+        "status": "Reported",
+        "problem": "Road",
+        "severity": "Medium",
+        "confidence": 88,
+        "impact": "Can increase accident and traffic risks.",
+        "keywords_found": [
+            "road"
+        ],
+        "ripple_chain": [
+            "Road damage",
+            "Vehicle difficulty",
+            "Traffic disruption",
+            "Accident risk"
+        ],
+        "ripple_risk": "Medium",
+        "recommendation": "Inspect the damaged road and prioritize repair based on traffic intensity.",
+        "risk_score": 65,
+        "risk_level": "Medium",
+        "report_count": 3,
+        "created_at": "2026-09-27T09:51:49.325083"
+    },
+    {
+        "id": 11,
+        "category": "Streetlight",
+        "description": "street lights are not working properly",
+        "location": "sitra",
+        "image": null,
+        "status": "Reported",
+        "problem": "Streetlight",
+        "severity": "Medium",
+        "confidence": 91,
+        "impact": "Can reduce visibility and increase safety risks.",
+        "keywords_found": [
+            "streetlight",
+            "street light"
+        ],
+        "ripple_chain": [
+            "Broken streetlight",
+            "Poor visibility",
+            "Reduced night-time safety",
+            "Accident risk"
+        ],
+        "ripple_risk": "Medium",
+        "recommendation": "Repair the streetlight and inspect nearby lights for similar failures.",
+        "risk_score": 60,
+        "risk_level": "Medium",
+        "report_count": 2,
+        "created_at": "2026-09-27T09:54:59.606443"
     }
 ]
